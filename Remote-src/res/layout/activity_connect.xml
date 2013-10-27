@@ -1,0 +1,112 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context=".ConnectActivity" >
+
+    <LinearLayout 
+	    android:id="@+id/connection_elements"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical">
+	    
+	    <TextView
+	        android:id="@+id/tv_connect_label"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="25dp"
+        	android:layout_marginRight="25dp"
+			android:gravity="center"
+	        android:layout_marginTop="24dp"
+	        android:text="Enter the IP address and port number as displayed on your computer"
+	        android:textAppearance="?android:attr/textAppearanceLarge"/>
+	
+	    <EditText
+	        android:id="@+id/field_ip"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="25dp"
+        	android:layout_marginRight="25dp"
+        	android:layout_marginTop="20dp"
+        	android:layout_marginBottom="5dp"
+	        android:layout_gravity="center"
+	        android:ems="10"
+	        android:inputType="phone"
+	        android:hint="IP Address"
+	        android:text="172.31.53.230">
+	        <requestFocus />
+	    </EditText>
+	    
+	    <EditText
+	        android:id="@+id/field_port"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="25dp"
+        	android:layout_marginRight="25dp"
+        	android:layout_marginTop="5dp"
+        	android:layout_marginBottom="20dp"
+	        android:layout_gravity="center"
+	        android:ems="10"
+	        android:inputType="phone"
+	        android:hint="Port Number"
+	        android:text="8085"/>
+	    
+	    <Button
+	        android:id="@+id/btn_connect"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="25dp"
+        	android:layout_marginRight="25dp"
+        	android:layout_marginTop="20dp"
+        	android:layout_marginBottom="5dp"
+	        android:layout_gravity="center"
+	        android:text="Connect"/>
+	    
+    </LinearLayout>
+    
+    <ProgressBar
+	    android:id="@+id/connect_progress"
+	    style="?android:attr/progressBarStyleLarge"
+	    android:layout_width="wrap_content"
+	    android:layout_height="fill_parent"
+	    android:layout_centerHorizontal="true"
+	    android:layout_gravity="center_vertical|center_horizontal"
+	    android:visibility="gone"/>
+    
+    <LinearLayout 
+	    android:id="@+id/success_elements"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical"
+	    android:visibility="gone">
+	    
+        <TextView
+	        android:id="@+id/tv_success_label"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="25dp"
+        	android:layout_marginRight="25dp"
+			android:gravity="center"
+	        android:layout_marginTop="24dp"
+	        android:text="Connection Successful"
+	        android:textAppearance="?android:attr/textAppearanceLarge"/>
+        
+	    <Button
+		    android:id="@+id/btn_continue"
+		    android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="50dp"
+        	android:layout_marginRight="50dp"
+        	android:layout_marginTop="100dp"
+        	android:textSize="10pt"
+		    android:layout_gravity="center_vertical"
+		    android:text="Continue"/>
+	    
+    </LinearLayout>
+
+</LinearLayout>
